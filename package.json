@@ -1,0 +1,18 @@
+{
+  "name": "tuplizer",
+  "version": "0.0.0",
+  "description": "powerful utility functions to change the elements in tuples",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && tsd"
+  },
+  "keywords": [],
+  "author": "Moshe Kolodny",
+  "license": "ISC",
+  "devDependencies": {
+    "tsd": "^0.8.0",
+    "typescript": "^3.6.3"
+  }
+}
