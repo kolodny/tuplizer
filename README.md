@@ -1,7 +1,7 @@
 tuplizer
 ===
 
-Powerful utility functions to change the elements in tuples. Not guaranteed to work on tuples larger than 10 elements.
+Powerful typescript types to manipulate tuples. Not guaranteed to work on tuples larger than 10 elements.
 
 See [index.test-d.ts](index.test-d.ts) for usage
 

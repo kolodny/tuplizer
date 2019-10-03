@@ -1,5 +1,5 @@
-import {expectType} from 'tsd';
-import {IsSpecificNumber, IsTuple, First, Rest, Prepend, Take, Inc, Dec, Drop, Slice, Concat, Remove} from './'
+import {expectType, expectError} from 'tsd';
+import {IsSpecificNumber, IsTuple, First, Rest, Prepend, Take, Inc, Dec, Drop, Slice, Concat, Remove, LessThan, LessThanOrEqual} from './'
 
 expectType<IsSpecificNumber<1>>(true);
 expectType<IsSpecificNumber<number>>(false);
@@ -20,6 +20,17 @@ expectType<Inc<5>>(6);
 expectType<Dec<5>>(4);
 expectType<Inc<100>>({} as number);
 expectType<Dec<100>>({} as number);
+
+expectType<LessThan<6>>(5);
+expectError<LessThan<6>>(8);
+expectError<LessThan<6>>(6);
+expectError<LessThan<6>>({} as number);
+expectType<LessThanOrEqual<6>>(5);
+expectError<LessThanOrEqual<6>>(8);
+expectType<LessThanOrEqual<6>>(6);
+
+expectType<LessThan<15>>(1);
+expectType<LessThan<15>>({} as number);
 
 expectType<Take<MyTuple, 3>>([0, 2, '']);
 expectType<Take<MyTuple, 20>>([]);

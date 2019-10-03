@@ -82,3 +82,20 @@ export type Remove<T extends any[], N extends number> =
       1
     >
   >;
+
+export type LessThan<N extends number> =
+  IsSpecificNumber<N> extends false ? number :
+  N extends  0 ? never :
+  N extends  1 ? 0 :
+  N extends  2 ? 0|1 :
+  N extends  3 ? 0|1|2 :
+  N extends  4 ? 0|1|2|3 :
+  N extends  5 ? 0|1|2|3|4 :
+  N extends  6 ? 0|1|2|3|4|5 :
+  N extends  7 ? 0|1|2|3|4|5|6 :
+  N extends  8 ? 0|1|2|3|4|5|6|7 :
+  N extends  9 ? 0|1|2|3|4|5|6|7|8 :
+  N extends 10 ? 0|1|2|3|4|5|6|7|8|9 :
+  number;
+
+export type LessThanOrEqual<N extends number> = LessThan<N> | N;

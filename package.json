@@ -1,7 +1,7 @@
 {
   "name": "tuplizer",
-  "version": "0.0.1",
-  "description": "powerful utility functions to change the elements in tuples",
+  "version": "0.0.2",
+  "description": "powerful typescript types to manipulate tuples",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
